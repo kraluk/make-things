@@ -1,0 +1,10 @@
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+echo $JAVA_HOME
+
+----------------------------------------------
+
+curl -s get.sdkman.io | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install groovy
+groovy -version

@@ -1,0 +1,30 @@
+export JAVA_HOME=/usr/lib/jvm/java-8-jdk/
+
+echo $JAVA_HOME
+
+----------------------------------------------
+UBUNTU
+
+sudo apt-get install openjdk-8-jdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export PATH=$PATH:/usr/lib/jvm/java-7-openjdk/bin
+
+albo (dla MINTA rowniez)
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+----------------------------------------------
+
+FEDORA
+
+rpm -ivh jdk-8u111-linux-x64.rpm
+alternatives --config java
+
+----------------------------------------------
+
+curl -s get.sdkman.io | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install groovy
+groovy -version
